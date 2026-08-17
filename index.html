@@ -66,7 +66,7 @@ main{max-width:1180px;margin:0 auto;padding:26px 22px 80px}
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:9px}
 /* sub-nav trong Operation */
-.subnav{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:5px;margin-bottom:20px;box-shadow:var(--shadow)}
+.subnav{display:inline-flex;gap:4px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:5px;margin-bottom:0;box-shadow:var(--shadow);flex-wrap:wrap}
 .subnav button{font-family:inherit;font-size:14px;font-weight:600;color:var(--ink-soft);background:none;border:none;padding:9px 18px;border-radius:9px;cursor:pointer;transition:.15s}
 .subnav button:hover{background:var(--bg);color:var(--ink)}
 .subnav button.on{background:var(--teal);color:#fff}
@@ -87,14 +87,57 @@ main{max-width:1180px;margin:0 auto;padding:26px 22px 80px}
 .bar-row{display:flex;align-items:center;gap:10px;margin-bottom:9px;font-size:13px}
 .bar-row .bl{width:96px;flex-shrink:0;color:var(--ink)}
 .bar-row .bt{flex:1;height:22px;background:var(--bg);border-radius:6px;overflow:hidden;position:relative}
-.bar-row .bf{height:100%;border-radius:6px;transition:width .5s ease;min-width:2px}
+.bar-row .bf{height:100%;border-radius:6px;min-width:3px;background:var(--teal)}
 .bar-row .bv{width:78px;flex-shrink:0;text-align:right;font-family:'IBM Plex Mono';font-size:12.5px;color:var(--ink-soft)}
+/* donut / pie charts */
+.charts3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+@media(max-width:900px){.charts3{grid-template-columns:1fr}}
+.donutwrap{display:flex;align-items:center;gap:18px}
+.donutwrap svg{flex-shrink:0}
+.dseg{transition:opacity .15s}
+.dlegend{display:flex;flex-direction:column;gap:8px;font-size:12.5px;min-width:0;flex:1}
+.dlegend .lg{display:flex;align-items:center;gap:8px;min-width:0}
+.dlegend .sw{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.dlegend .lg .nm{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dlegend .lg b{margin-left:auto;font-family:'IBM Plex Mono';font-weight:600;color:var(--ink);padding-left:8px}
+.dctop{font-family:'IBM Plex Mono';font-weight:600;fill:var(--ink)}
+.dcbot{fill:var(--ink-soft)}
+.dempty{font-size:12.5px;color:var(--ink-soft);padding:14px 0}
+/* finance box in overview */
+.finov{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:20px}
+.finov h3{font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.finov h3 .dot{width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.finov .asof{font-size:11.5px;color:var(--ink-soft);margin-bottom:16px}
+.fingrid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+@media(max-width:760px){.fingrid{grid-template-columns:1fr}}
+.fin3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fin3 .f{background:var(--bg);border-radius:12px;padding:13px 14px;text-align:center}
+.fin3 .f .l{font-size:11.5px;font-weight:600;color:var(--ink-soft);margin-bottom:5px}
+.fin3 .f .v{font-family:'IBM Plex Mono';font-size:17px;font-weight:600;line-height:1.1}
+.finbal{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.finbal b{font-family:'IBM Plex Mono'}
+/* sticky sub-nav */
+.subnav-sticky{position:sticky;top:56px;z-index:45;background:var(--bg);margin:0 -22px 18px;padding:12px 22px 2px}
+/* frozen table header (Ứng viên / Nhà bảo trợ) */
+.tablewrap.frozen{max-height:calc(100vh - 150px);overflow:auto}
+/* nguồn chi trong Lịch sử */
+.srcq{font-size:10px;font-weight:700;padding:2px 9px;border-radius:6px;background:var(--gold-soft);color:#8a6300;margin-left:6px;white-space:nowrap;text-transform:none;letter-spacing:0}
+.srcn{font-size:10px;font-weight:700;padding:2px 9px;border-radius:6px;background:var(--ok-soft);color:var(--teal-deep);margin-left:6px;white-space:nowrap;text-transform:none;letter-spacing:0}
 /* NBT ledger */
 .nbtwrap-note{font-size:12.5px;color:var(--ink-soft);margin:2px 0 14px}
 td.uvlink{cursor:pointer}
 .uvchip{display:inline-block;font-family:'IBM Plex Mono';font-size:10.5px;font-weight:600;background:var(--ok-soft);color:var(--teal-deep);padding:2px 7px;border-radius:6px;margin:1px 3px 1px 0;cursor:pointer;transition:.15s}
 .uvchip:hover{background:var(--teal);color:#fff}
 .tnvbadge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px;background:#ece7f7;color:#6b4bb0}
+.ststat{font-size:10px;font-weight:700;padding:2px 8px;border-radius:6px}
+.ststat.sd{background:#eceff0;color:#6a7b78}
+.ststat.sc{background:var(--ok-soft);color:var(--teal-deep)}
+.ststat.sp{background:var(--gold-soft);color:#8a6300}
+.hist-tot{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.htbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.htbox .l{font-size:12px;font-weight:600;color:var(--ink-soft)}
+.htbox .v{font-family:'IBM Plex Mono';font-size:19px;font-weight:600;margin-top:5px}
+@media(max-width:900px){.hist-tot{grid-template-columns:1fr 1fr}}
 section.block{margin-bottom:30px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 /* ---------- HERO (tab1) ---------- */
@@ -539,12 +582,16 @@ tr.flash td{animation:flashrow 1.7s ease}
 
 <!-- ============ TAB 2: OPERATION ============ -->
 <div class="panel" id="tab-op">
-  <div class="subnav" id="opSubnav">
-    <button class="on" data-sub="overview">📊 Tổng quan</button>
-    <button data-sub="uv">🎓 Ứng viên</button>
-    <button data-sub="nbt">🤝 Nhà bảo trợ</button>
+  <div class="subnav-sticky">
+    <div class="subnav" id="opSubnav">
+      <button class="on" data-sub="overview">📊 Tổng quan</button>
+      <button data-sub="uv">🎓 Ứng viên</button>
+      <button data-sub="hist">📅 Lịch sử &amp; Kế hoạch</button>
+      <button data-sub="nbt">🤝 Nhà bảo trợ</button>
+    </div>
   </div>
   <div class="subpanel on" id="sub-overview"><div id="ovWrap"></div></div>
+  <div class="subpanel" id="sub-hist"><div id="histWrap"></div></div>
   <div class="subpanel" id="sub-nbt"><div id="nbtWrap"></div></div>
   <div class="subpanel" id="sub-uv">
   <div class="eyebrow">Operation · Ứng viên · Năm học 2026–2027</div>
@@ -564,7 +611,7 @@ tr.flash td{animation:flashrow 1.7s ease}
       <span>🔗 Danh sách &amp; nhà bảo trợ từ sheet <b>Hồ sơ ứng viên</b> — <a href="https://docs.google.com/spreadsheets/d/1Mu_fVYuM-PT35sdvS4m3johKWqi8Iw7cMQJ3BddbCDg/edit" target="_blank">file 2026. Cánh hạc bay</a></span>
       <span>👤 Tên có <b style="color:var(--blue)">↗ hồ sơ</b> → bấm để mở hồ sơ ứng viên</span>
     </div>
-    <div class="tablewrap">
+    <div class="tablewrap frozen">
       <table class="grid">
         <thead><tr>
           <th style="width:70px">Mã / Nguồn</th>
@@ -739,7 +786,7 @@ const PASSKEY = 'CanhHacBay20@^';
 // ---------- DỮ LIỆU (từ file 2026. Cánh hạc bay + form Responses) ----------
 const DEFAULT_MONTHLY = 500000;
 // ROSTER = danh sách đã/đang/sẽ hỗ trợ (sheet "Hồ sơ ứng viên"). grp: g1 tiếp tục ĐH · g2 khóa mới 2026-27 · g3 đã dừng
-const ROSTER = [{"ma": "NB.01", "ten": "Nguy\u1ec5n Th\u1ecb Ph\u01b0\u01a1ng Anh", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "12A6 THPT A Kim B\u1ea3ng", "spon": "Tr\u1ea7n Tu\u1ea5n D\u0169ng", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 4, "thuThang": 0}, {"ma": "NB.02", "ten": "L\u1ea1i Ph\u01b0\u01a1ng Th\u00fay", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "12A2 THPT A Kim B\u1ea3ng", "spon": "Nh\u00f3m INFN VN", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0}, {"ma": "NB.03", "ten": "Tr\u01b0\u01a1ng Thanh H\u1ea3i", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "HV C\u00f4ng ngh\u1ec7 BCVT", "spon": "HKD Minh An Ph\u00e1t", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 4, "thuThang": 0}, {"ma": "PT.01", "ten": "Nguy\u1ec5n Danh S\u01a1n", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "12A1 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0}, {"ma": "PT.02", "ten": "Nguy\u1ec5n Th\u1ecb H\u1ea3i Anh", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "12A1 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0}, {"ma": "PT.03", "ten": "Ph\u1ea1m Th\u1ecb Lan H\u01b0\u01a1ng", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "11A4 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Ch\u1ecb Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2025-2026", "chiThang": 1, "thuThang": 0}, {"ma": "PT.04", "ten": "B\u00f9i Th\u1ecb C\u1ea9m Ly", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "L\u1edbp 12 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0}, {"ma": "PT.05", "ten": "\u0110\u1ed7 Ho\u00e0ng H\u1ea3i", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "L\u1edbp 12 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Hai em Tr\u00f2n, \u1ea4m", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0}, {"ma": "HT.01", "ten": "\u0110\u1eadu Th\u1ecb B\u1ea3o Ng\u1ecdc", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "Ch\u00fa Vi\u1ec7t Anh (B\u1eafc Giang)", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr5/th\u00e1ng", "grp": "g2", "monthly": 1500000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HT.02", "ten": "Phan Thanh H\u00e0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "Ch\u00fa Ng\u00f4 T\u1ea5n", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HT.03", "ten": "Th\u00e1i T\u00e2m Nh\u01b0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 H\u1eb1ng Mon", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HT.04", "ten": "Tr\u1ea7n B\u00e1 \u0110\u1ee9c", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Qu\u1ef3nh Anh", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HT.05", "ten": "Phan Anh Th\u01b0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HT.06", "ten": "L\u00ea Nh\u1eadt H\u1ea3i", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "NB.04", "ten": "D\u01b0\u01a1ng Nh\u1eadt B\u00e1ch", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "NB.05", "ten": "Nguy\u1ec5n V\u0103n Tr\u01b0\u1eddng", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "C\u00f4 \u0110\u1ed7 Th\u1ecb Thu Ho\u00e0", "ht": "\u0110\u00e3 nh\u1eadn 10tr/10 th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 10}, {"ma": "NB.06", "ten": "Nguy\u1ec5n Ph\u01b0\u01a1ng Nhung", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 10 THPT C Kim B\u1ea3ng", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 500000, "grade": 10, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "NB.07", "ten": "Nguy\u1ec5n H\u1ea3i Phong", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 11 THPT L\u00fd Th\u01b0\u1eddng Ki\u1ec7t", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "NB.08", "ten": "Nguy\u1ec5n \u0110\u1ee9c Ki\u00ean", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "Ch\u00fa Long Voi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "HN.01", "ten": "L\u00ea Minh Ch\u00e2u", "reg": "H\u00e0 N\u1ed9i", "provCode": "HN", "meta": "L\u1edbp 10 (TN THCS Xu\u00e2n La)", "spon": "c\u00f4 Nguy\u1ec7t (Moon Li)", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 10, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}, {"ma": "TQ.01", "ten": "N\u00f4ng Minh Ph\u01b0\u01a1ng", "reg": "Tuy\u00ean Quang", "provCode": "TQ", "meta": "L\u1edbp 11 THPT H\u00e0m Y\u00ean", "spon": "Ch\u00fa Ng\u00f4 T\u1ea5n", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0}];
+const ROSTER = [{"ma": "NB.01", "ten": "Nguy\u1ec5n Th\u1ecb Ph\u01b0\u01a1ng Anh", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "12A6 THPT A Kim B\u1ea3ng", "spon": "Tr\u1ea7n Tu\u1ea5n D\u0169ng", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 4, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 4, "rate": 1000000, "status": "done"}, {"year": "2026-2027", "grade": "DH", "months": 10, "rate": 1000000, "status": "current"}, {"year": "2027-2028", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2028-2029", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2029-2030", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "NB.02", "ten": "L\u1ea1i Ph\u01b0\u01a1ng Th\u00fay", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "12A2 THPT A Kim B\u1ea3ng", "spon": "Nh\u00f3m INFN VN", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 2, "rate": 1000000, "status": "done"}, {"year": "2026-2027", "grade": "DH", "months": 10, "rate": 1000000, "status": "current"}, {"year": "2027-2028", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2028-2029", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2029-2030", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "NB.03", "ten": "Tr\u01b0\u01a1ng Thanh H\u1ea3i", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "HV C\u00f4ng ngh\u1ec7 BCVT", "spon": "HKD Minh An Ph\u00e1t", "ht": "Ti\u1ebfp t\u1ee5c h\u1ed7 tr\u1ee3 \u0110H", "grp": "g1", "monthly": 1000000, "grade": "DH", "dh": true, "active": true, "cohort": "2025-2026", "chiThang": 4, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 4, "rate": 1000000, "status": "done"}, {"year": "2026-2027", "grade": "DH", "months": 10, "rate": 1000000, "status": "current"}, {"year": "2027-2028", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2028-2029", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}, {"year": "2029-2030", "grade": "DH", "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "PT.01", "ten": "Nguy\u1ec5n Danh S\u01a1n", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "12A1 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 2, "rate": 1000000, "status": "done"}]}, {"ma": "PT.02", "ten": "Nguy\u1ec5n Th\u1ecb H\u1ea3i Anh", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "12A1 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 2, "rate": 1000000, "status": "done"}]}, {"ma": "PT.03", "ten": "Ph\u1ea1m Th\u1ecb Lan H\u01b0\u01a1ng", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "11A4 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Ch\u1ecb Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2025-2026", "chiThang": 1, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 10, "months": 1, "rate": 500000, "status": "done"}, {"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "PT.04", "ten": "B\u00f9i Th\u1ecb C\u1ea9m Ly", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "L\u1edbp 12 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Qu\u1ef9 CHB", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 2, "rate": 1000000, "status": "done"}]}, {"ma": "PT.05", "ten": "\u0110\u1ed7 Ho\u00e0ng H\u1ea3i", "reg": "Ph\u00fa Th\u1ecd", "provCode": "PT", "meta": "L\u1edbp 12 THPT Ph\u01b0\u01a1ng X\u00e1", "spon": "Hai em Tr\u00f2n, \u1ea4m", "ht": "\u0110\u00e3 d\u1eebng", "grp": "g3", "monthly": 1000000, "grade": 12, "dh": false, "active": false, "cohort": "2025-2026", "chiThang": 2, "thuThang": 0, "recs": [{"year": "2025-2026", "grade": 12, "months": 2, "rate": 1000000, "status": "done"}]}, {"ma": "HT.01", "ten": "\u0110\u1eadu Th\u1ecb B\u1ea3o Ng\u1ecdc", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "Ch\u00fa Vi\u1ec7t Anh (B\u1eafc Giang)", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr5/th\u00e1ng", "grp": "g2", "monthly": 1500000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1500000, "status": "current"}]}, {"ma": "HT.02", "ten": "Phan Thanh H\u00e0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "Ch\u00fa Ng\u00f4 T\u1ea5n", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1000000, "status": "current"}]}, {"ma": "HT.03", "ten": "Th\u00e1i T\u00e2m Nh\u01b0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 H\u1eb1ng Mon", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "HT.04", "ten": "Tr\u1ea7n B\u00e1 \u0110\u1ee9c", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Qu\u1ef3nh Anh", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "HT.05", "ten": "Phan Anh Th\u01b0", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 12 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1000000, "status": "current"}]}, {"ma": "HT.06", "ten": "L\u00ea Nh\u1eadt H\u1ea3i", "reg": "H\u00e0 T\u0129nh", "provCode": "HT", "meta": "L\u1edbp 11 THPT H\u01b0\u01a1ng Kh\u00ea", "spon": "C\u00f4 Chi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "NB.04", "ten": "D\u01b0\u01a1ng Nh\u1eadt B\u00e1ch", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1000000, "status": "current"}]}, {"ma": "NB.05", "ten": "Nguy\u1ec5n V\u0103n Tr\u01b0\u1eddng", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "C\u00f4 \u0110\u1ed7 Th\u1ecb Thu Ho\u00e0", "ht": "\u0110\u00e3 nh\u1eadn 10tr/10 th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 10, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1000000, "status": "current"}]}, {"ma": "NB.06", "ten": "Nguy\u1ec5n Ph\u01b0\u01a1ng Nhung", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 10 THPT C Kim B\u1ea3ng", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 500000, "grade": 10, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 10, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 11, "months": 9, "rate": 500000, "status": "plan"}, {"year": "2028-2029", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "NB.07", "ten": "Nguy\u1ec5n H\u1ea3i Phong", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 11 THPT L\u00fd Th\u01b0\u1eddng Ki\u1ec7t", "spon": "", "ht": "Ch\u01b0a c\u00f3 nh\u00e0 b\u1ea3o tr\u1ee3", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "NB.08", "ten": "Nguy\u1ec5n \u0110\u1ee9c Ki\u00ean", "reg": "Ninh B\u00ecnh", "provCode": "NB", "meta": "L\u1edbp 12 THPT C Kim B\u1ea3ng", "spon": "Ch\u00fa Long Voi", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 12, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 12, "months": 10, "rate": 1000000, "status": "current"}]}, {"ma": "HN.01", "ten": "L\u00ea Minh Ch\u00e2u", "reg": "H\u00e0 N\u1ed9i", "provCode": "HN", "meta": "L\u1edbp 10 (TN THCS Xu\u00e2n La)", "spon": "c\u00f4 Nguy\u1ec7t (Moon Li)", "ht": "\u0110ang h\u1ed7 tr\u1ee3 1tr/th\u00e1ng", "grp": "g2", "monthly": 1000000, "grade": 10, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 10, "months": 9, "rate": 1000000, "status": "current"}, {"year": "2027-2028", "grade": 11, "months": 9, "rate": 500000, "status": "plan"}, {"year": "2028-2029", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}, {"ma": "TQ.01", "ten": "N\u00f4ng Minh Ph\u01b0\u01a1ng", "reg": "Tuy\u00ean Quang", "provCode": "TQ", "meta": "L\u1edbp 11 THPT H\u00e0m Y\u00ean", "spon": "Ch\u00fa Ng\u00f4 T\u1ea5n", "ht": "\u0110ang h\u1ed7 tr\u1ee3 500k/th\u00e1ng", "grp": "g2", "monthly": 500000, "grade": 11, "dh": false, "active": true, "cohort": "2026-2027", "chiThang": 0, "thuThang": 0, "recs": [{"year": "2026-2027", "grade": 11, "months": 9, "rate": 500000, "status": "current"}, {"year": "2027-2028", "grade": 12, "months": 10, "rate": 1000000, "status": "plan"}]}];
 const NBT = [{"ma": "NBT.01", "ten": "Tr\u1ea7n Tu\u1ea5n D\u0169ng", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "Li\u00ean h\u1ec7 qua ch\u1ecb H\u00e0", "tnv": "Ng\u00e2n", "uv": ["NB.01"]}, {"ma": "NBT.02", "ten": "Nh\u00f3m INFN VN", "phanLoai": "Nh\u00f3m", "lienHe": "Li\u00ean h\u1ec7 qua Quang", "tnv": "Quang", "uv": ["NB.02"]}, {"ma": "NBT.03", "ten": "HKD Minh An Ph\u00e1t", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "Li\u00ean h\u1ec7 qua ch\u1ecb H\u00e0", "tnv": "C H\u00e0", "uv": ["NB.03"]}, {"ma": "NBT.04", "ten": "C\u00f4 Chi", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "", "tnv": "Minh", "uv": ["PT.03", "HT.05", "HT.06"]}, {"ma": "NBT.05", "ten": "Hai em Tr\u00f2n, \u1ea4m", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "0912670789", "tnv": "Quang", "uv": ["PT.05"]}, {"ma": "NBT.06", "ten": "Ch\u00fa Vi\u1ec7t Anh", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "Li\u00ean h\u1ec7 qua H\u01b0\u01a1ng Kh\u00e1nh", "tnv": "Ng\u00e2n", "uv": ["HT.01"]}, {"ma": "NBT.07", "ten": "Ch\u00fa Ng\u00f4 T\u1ea5n", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "", "tnv": "Ng\u00e2n", "uv": ["HT.02", "TQ.01"]}, {"ma": "NBT.08", "ten": "C\u00f4 H\u1eb1ng Mon", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "(h\u1ecfi ch\u1ecb Ng\u00e2n)", "tnv": "Quang", "uv": ["HT.03"]}, {"ma": "NBT.09", "ten": "C\u00f4 Qu\u1ef3nh Anh", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "0904174292", "tnv": "Quang", "uv": ["HT.04"]}, {"ma": "NBT.10", "ten": "C\u00f4 Nguy\u1ec7t (Moon Li)", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "0969290288", "tnv": "Quang", "uv": ["HN.01"]}, {"ma": "NBT.11", "ten": "C\u00f4 \u0110\u1ed7 Th\u1ecb Thu Ho\u00e0", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "0969351133", "tnv": "Minh", "uv": ["NB.05"]}, {"ma": "NBT.12", "ten": "Ch\u00fa Ho\u00e0ng Vi\u1ec7t Long", "phanLoai": "C\u00e1 nh\u00e2n", "lienHe": "0902066088", "tnv": "Long", "uv": ["NB.08"]}];
 const GROUPS = {
   g1:{label:'◆ Tiếp tục lên Đại học', on:true},
@@ -809,7 +856,7 @@ function bindRow(tr){
   thuEl.addEventListener('input',()=>{R.thuThang=parseInt(thuEl.value)||0;recompute();});
   chiEl.addEventListener('input',()=>{R.chiThang=parseInt(chiEl.value)||0;recompute();});
   if(myEl) myEl.addEventListener('input',()=>{R.mThisYear=parseInt(myEl.value)||0;recompute();});
-  if(dhEl) dhEl.addEventListener('change',()=>{R.dh=dhEl.checked;renderCands();recompute();});
+  if(dhEl) dhEl.addEventListener('change',()=>{R.dh=dhEl.checked;applyDH(R);renderCands();recompute();});
   const lc=tr.querySelector('.linkcand');
   if(lc) lc.addEventListener('click',()=>openCand(+lc.dataset.ci));
 }
@@ -1135,7 +1182,7 @@ function renderCands(){
   grid.querySelectorAll('.uvCard').forEach(el=>el.addEventListener('click',ev=>{ if(ev.target.closest('.dhtog'))return; openCand(+el.dataset.i); }));
   grid.querySelectorAll('.dhtog').forEach(el=>el.addEventListener('click',ev=>{
     ev.stopPropagation(); const r=ROSTER.find(x=>x.ma===el.dataset.ma); if(!r)return;
-    r.dh=!r.dh; renderCands(); recompute();
+    r.dh=!r.dh; applyDH(r); renderCands(); recompute();
     // đồng bộ tick ĐH ở bảng Ứng viên nếu có
     const tr=[...document.querySelectorAll('#tbody tr[data-idx]')].find(t=>ROSTER[+t.dataset.idx]&&ROSTER[+t.dataset.idx].ma===el.dataset.ma);
     if(tr){const cb=tr.querySelector('.cbDH'); if(cb)cb.checked=r.dh;}
@@ -1186,15 +1233,23 @@ document.getElementById('uvSearch').addEventListener('input',renderCands);
 // ================= TÀI CHÍNH THEO UV + NBT + TỔNG QUAN =================
 ROSTER.forEach(r=>{ if(r.mThisYear==null) r.mThisYear = monthsForGrade(r.grade); });
 const gradeLabel = g => g==='DH'||g==='12'||g===12 ? (g==='DH'?'Đại học':'Lớp 12') : ('Lớp '+g);
-// tài chính 1 UV
+// tài chính 1 UV — tính từ records theo niên khóa
 function uvFinance(r){
-  const my = r.mThisYear!=null ? r.mThisYear : monthsForGrade(r.grade);
-  const active = !!r.active;
-  const past = (r.chiThang||0)*(r.monthly||0);
-  const thisYear = active ? (r.monthly||0)*my : 0;
-  const toEndM = active ? (monthsToGrade12(r.grade) + (r.dh?DH_MONTHS:0)) : 0;
-  const toEnd = active ? (r.monthly||0)*toEndM : 0;
-  return {past, thisYear, toEnd, my, toEndM};
+  const recs=r.recs||[]; let past=0,thisYear=0,toEnd=0;
+  recs.forEach(x=>{ const amt=(+x.months||0)*(+x.rate||0);
+    if(x.status==='done') past+=amt;
+    else { toEnd+=amt; if(x.year==='2026-2027') thisYear+=amt; }
+  });
+  return {past, thisYear, toEnd};
+}
+function applyDH(r){
+  r.recs=(r.recs||[]).filter(x=>x.grade!=='DH' || x.status==='done');
+  if(r.dh && r.active){
+    let lastY=2025; r.recs.forEach(x=>{const y=+String(x.year).split('-')[0]; if(y>lastY)lastY=y;});
+    let start=Math.max(lastY+1,2026);
+    for(let i=0;i<4;i++){ const y=start+i; r.recs.push({year:`${y}-${y+1}`,grade:'DH',months:10,rate:r.monthly,status:(y===2026?'current':'plan')}); }
+    r.recs.sort((a,b)=>(a.year<b.year?-1:1));
+  }
 }
 // năm học được hỗ trợ của 1 UV (mảng "2026-2027",...) để lọc theo năm
 function uvYears(r){
@@ -1239,7 +1294,7 @@ function renderNBT(){
   wrap.innerHTML=`
     <div class="shead"><h2>Nhà bảo trợ <span style="font-weight:600;color:var(--ink-soft);font-size:15px">· ${NBT.length} NBT</span></h2></div>
     <div class="nbtwrap-note">Số tiền tự tính từ tab <b>Ứng viên</b> (mức/tháng × số tháng). Bấm mã UV để mở hồ sơ. “Đã hỗ trợ” = số tháng đã chi × mức; “Năm nay” = 2026–2027; “Tới hết CT” = tới hết lớp 12 (+4 năm nếu tick ĐH).</div>
-    <div class="tablewrap"><table class="grid" style="min-width:900px"><thead><tr>
+    <div class="tablewrap frozen"><table class="grid" style="min-width:900px"><thead><tr>
       <th style="width:60px">Mã</th><th>Nhà bảo trợ</th><th style="width:150px">Liên hệ</th><th style="width:70px">TNV</th>
       <th>Ứng viên đỡ</th><th class="tnum" style="width:120px">Đã hỗ trợ</th><th class="tnum" style="width:130px">Năm nay 26–27</th><th class="tnum" style="width:130px">Tới hết CT</th>
     </tr></thead><tbody>${rows}
@@ -1251,6 +1306,27 @@ function renderNBT(){
 }
 
 // ---------- Tổng quan ----------
+// Dòng tiền quỹ (lũy kế từ Thiện Nguyện App — cập nhật khi admin lưu số liệu)
+const FIN={thu:60999796,chi:22500000,asOf:'17/08/2026'};
+// SVG donut/pie: segs=[{nm,value,color}] ; cTop/cBot = chữ ở tâm ; fmtVal = hàm format số ở chú thích
+function donut(segs,opts){
+  opts=opts||{}; const fmtVal=opts.fmtVal||(v=>v);
+  const shown=segs.filter(s=>(+s.value||0)>0);
+  const total=shown.reduce((a,s)=>a+(+s.value||0),0);
+  const R=52, CX=64, CY=64, SW=20, C=2*Math.PI*R;
+  let arcs='', off=0;
+  if(total>0){
+    shown.forEach(s=>{ const len=(+s.value/total)*C;
+      arcs+=`<circle class="dseg" r="${R}" cx="${CX}" cy="${CY}" fill="none" stroke="${s.color}" stroke-width="${SW}" stroke-dasharray="${len.toFixed(2)} ${(C-len).toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}" transform="rotate(-90 ${CX} ${CY})"></circle>`;
+      off+=len; });
+  } else {
+    arcs=`<circle r="${R}" cx="${CX}" cy="${CY}" fill="none" stroke="#e3ece8" stroke-width="${SW}"></circle>`;
+  }
+  const cTop=opts.cTop!=null?`<text x="${CX}" y="${CY-2}" text-anchor="middle" class="dctop" font-size="${opts.cTopSize||18}">${opts.cTop}</text>`:'';
+  const cBot=opts.cBot!=null?`<text x="${CX}" y="${CY+16}" text-anchor="middle" class="dcbot" font-size="11">${opts.cBot}</text>`:'';
+  const leg=segs.map(s=>`<div class="lg"><span class="sw" style="background:${s.color}"></span><span class="nm">${s.nm}</span><b>${fmtVal(+s.value||0)}</b></div>`).join('');
+  return `<div class="donutwrap"><svg width="128" height="128" viewBox="0 0 128 128">${arcs}${cTop}${cBot}</svg><div class="dlegend">${leg}</div></div>`;
+}
 function bar(label,val,max,color,valTxt){
   const w=max>0?Math.round(val/max*100):0;
   return `<div class="bar-row"><span class="bl">${label}</span><span class="bt"><span class="bf" style="width:${w}%;background:${color}"></span></span><span class="bv">${valTxt!=null?valTxt:val}</span></div>`;
@@ -1284,18 +1360,96 @@ function renderOverview(){
       <div class="ovcard"><div class="accent" style="background:var(--gold)"></div><div class="lab">Nhu cầu hỗ trợ năm nay</div><div class="val" style="color:var(--gold);font-size:22px">${fmt(needYear)}</div><div class="sub">${NBT.length} nhà bảo trợ đang đồng hành</div></div>
       <div class="ovcard"><div class="accent" style="background:var(--blue)"></div><div class="lab">Cam kết tới hết chương trình</div><div class="val" style="color:var(--blue);font-size:22px">${fmt(toEndTotal)}</div><div class="sub">Tổng đã hỗ trợ: ${fmt(pastTotal)}</div></div>
     </div>
-    <div class="ov2">
-      <div class="ovbox"><h3><span class="dot"></span>Theo tỉnh</h3>${provs.map(p=>bar(provName[p],provCount[p],maxProv,provColor[p])).join('')}</div>
-      <div class="ovbox"><h3><span class="dot"></span>Theo tình trạng hỗ trợ</h3>${Object.keys(buckets).map(k=>bar(bkLabel[k],buckets[k],maxBk,bkColor[k])).join('')}</div>
+    <div class="charts3">
+      <div class="ovbox"><h3><span class="dot"></span>Theo tỉnh</h3>${
+        donut(provs.map(p=>({nm:provName[p],value:provCount[p],color:provColor[p]})),{cTop:ROSTER.length,cBot:'em',cTopSize:22})
+      }</div>
+      <div class="ovbox"><h3><span class="dot"></span>Theo tình trạng</h3>${
+        donut(Object.keys(buckets).map(k=>({nm:bkLabel[k],value:buckets[k],color:bkColor[k]})),{cTop:active.length,cBot:'đang HT',cTopSize:22})
+      }</div>
+      <div class="ovbox"><h3><span class="dot"></span>Theo lớp (đang HT)</h3>${
+        donut(Object.keys(grades).map((g,i)=>({nm:g,value:grades[g],color:['#7bc4b3','#2ca88f','#0e7a6b','#0b6aa8'][i]})),{cTop:active.length,cBot:'em',cTopSize:22})
+      }</div>
     </div>
-    <div class="ov2">
-      <div class="ovbox"><h3><span class="dot"></span>Theo lớp (đang hỗ trợ)</h3>${Object.keys(grades).map(g=>bar(g,grades[g],maxG,'#148f77')).join('')}</div>
-      <div class="ovbox"><h3><span class="dot"></span>Nguồn tài chính năm nay</h3>
-        ${bar('NBT cam kết',sponsoredYear,needYear||1,'#148f77',fmt(sponsoredYear))}
-        ${bar('Cần từ quỹ',Math.max(0,needYear-sponsoredYear),needYear||1,'#f2a900',fmt(Math.max(0,needYear-sponsoredYear)))}
-        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;display:flex;justify-content:space-between"><span class="k" style="color:var(--ink-soft)">Số dư quỹ hiện có</span><b class="mono">${fmt(fund)}</b></div>
+    <div class="finov">
+      <h3><span class="dot"></span>Tài chính năm học 2026–2027</h3>
+      <div class="asof">Kế hoạch tính từ danh sách ứng viên · Dòng tiền quỹ lũy kế cập nhật ${FIN.asOf}</div>
+      <div class="fingrid">
+        <div>
+          <div style="font-size:12.5px;font-weight:600;color:var(--ink-soft);margin-bottom:10px">Kế hoạch chi &amp; nguồn năm nay</div>
+          ${donut([
+            {nm:'NBT cam kết',value:sponsoredYear,color:'#148f77'},
+            {nm:'Cần từ quỹ',value:Math.max(0,needYear-sponsoredYear),color:'#f2a900'}
+          ],{cTop:fmt(needYear),cBot:"dự chi năm nay",cTopSize:12,fmtVal:fmt})}
+        </div>
+        <div>
+          <div style="font-size:12.5px;font-weight:600;color:var(--ink-soft);margin-bottom:10px">Dòng tiền quỹ (lũy kế)</div>
+          ${donut([
+            {nm:'Đã chi cho các em',value:FIN.chi,color:'#0b6aa8'},
+            {nm:'Số dư còn lại',value:fund,color:'#148f77'}
+          ],{cTop:fmt(FIN.chi+fund),cBot:"tổng đã thu",cTopSize:12,fmtVal:fmt})}
+        </div>
       </div>
+      <div class="fin3" style="margin-top:18px">
+        <div class="f"><div class="l">Dự chi năm nay</div><div class="v" style="color:var(--gold)">${fmt(needYear)}</div></div>
+        <div class="f"><div class="l">Đã thu (lũy kế)</div><div class="v" style="color:var(--teal-deep)">${fmt(FIN.chi+fund)}</div></div>
+        <div class="f"><div class="l">Đã chi (lũy kế)</div><div class="v" style="color:var(--blue)">${fmt(FIN.chi)}</div></div>
+      </div>
+      <div class="finbal"><span style="color:var(--ink-soft)">Số dư quỹ khả dụng hiện có</span><b style="color:var(--teal-deep)">${fmt(fund)}</b></div>
     </div>`;
+}
+
+// ---------- Lịch sử & Kế hoạch theo niên khóa ----------
+const STAT_LBL={done:'Đã chi',current:'Năm nay',plan:'Kế hoạch'};
+const STAT_CLS={done:'sd',current:'sc',plan:'sp'};
+function renderHist(){
+  const wrap=document.getElementById('histWrap');
+  let gPast=0,gCur=0,gPlan=0;
+  let body='';
+  ROSTER.forEach((r,ri)=>{
+    if(!r.recs||!r.recs.length) return;
+    let sPast=0,sCur=0,sPlan=0;
+    const isQuy = !r.spon || r.spon==='Quỹ CHB';
+    const srcChip = isQuy
+      ? `<span class="srcq" title="Không có nhà bảo trợ riêng — chương trình / quỹ chung chi">💠 Chương trình / Quỹ</span>`
+      : `<span class="srcn" title="Nhà bảo trợ riêng">🤝 ${esc(r.spon)}</span>`;
+    body+=`<tr class="grp"><td colspan="7"><b class="mono">${r.ma}</b> · ${esc(r.ten)} <span style="font-weight:400;color:var(--ink-soft)">· ${esc(r.reg)} · ${gradeLabel(r.grade)}</span> ${srcChip}</td></tr>`;
+    r.recs.forEach((x,xi)=>{
+      const amt=(+x.months||0)*(+x.rate||0);
+      if(x.status==='done'){sPast+=amt;gPast+=amt;} else if(x.year==='2026-2027'){sCur+=amt;gCur+=amt;} else {sPlan+=amt;gPlan+=amt;}
+      body+=`<tr data-ma="${r.ma}" data-ri="${ri}" data-xi="${xi}">
+        <td></td>
+        <td class="mono" style="font-size:12px">${x.year}</td>
+        <td>${gradeLabel(x.grade)}</td>
+        <td class="tnum"><input class="mth hMonths" type="number" min="0" max="12" value="${x.months}"></td>
+        <td class="tnum"><input class="money hRate" type="text" inputmode="numeric" value="${(+x.rate).toLocaleString('vi-VN')}" style="width:100px"></td>
+        <td class="tnum" style="font-weight:600">${fmt(amt)}</td>
+        <td><span class="ststat ${STAT_CLS[x.status]}">${STAT_LBL[x.status]}</span></td>
+      </tr>`;
+    });
+    body+=`<tr style="background:#fafcfb"><td></td><td colspan="4" style="text-align:right;color:var(--ink-soft);font-size:12px">Cộng em này — đã chi ${fmt(sPast)} · năm nay ${fmt(sCur)} · kế hoạch ${fmt(sPlan)}</td><td class="tnum" style="font-weight:700">${fmt(sPast+sCur+sPlan)}</td><td></td></tr>`;
+  });
+  wrap.innerHTML=`
+    <div class="shead"><h2>Lịch sử &amp; Kế hoạch hỗ trợ</h2></div>
+    <div class="nbtwrap-note">Mỗi em tách theo <b>niên khóa</b>: số tháng × mức/tháng = thành tiền. Sửa trực tiếp <b>số tháng</b> hoặc <b>mức</b> — bảng Nhà bảo trợ &amp; Tổng quan tự cập nhật. <span class="ststat sd">Đã chi</span>=lịch sử · <span class="ststat sc">Năm nay</span>=2026–2027 · <span class="ststat sp">Kế hoạch</span>=năm sau.</div>
+    <div class="nbtwrap-note" style="margin-top:-8px">Nhãn <b>nguồn chi</b> cạnh tên: <span class="srcn">🤝 Tên NBT</span> = có nhà bảo trợ riêng · <span class="srcq">💠 Chương trình / Quỹ</span> = quỹ chung chi (các bạn năm 25–26 chưa/không có NBT riêng, hoặc năm nay chưa có NBT).</div>
+    <div class="hist-tot">
+      <div class="htbox"><div class="l">Đã chi (lịch sử)</div><div class="v" style="color:var(--ink-soft)">${fmt(gPast)}</div></div>
+      <div class="htbox"><div class="l">Năm nay 2026–2027</div><div class="v" style="color:var(--teal-deep)">${fmt(gCur)}</div></div>
+      <div class="htbox"><div class="l">Kế hoạch năm sau</div><div class="v" style="color:var(--gold)">${fmt(gPlan)}</div></div>
+      <div class="htbox"><div class="l">Tổng cả chương trình</div><div class="v" style="color:var(--blue)">${fmt(gPast+gCur+gPlan)}</div></div>
+    </div>
+    <div class="tablewrap"><table class="grid" style="min-width:760px"><thead><tr>
+      <th style="width:20px"></th><th style="width:110px">Niên khóa</th><th style="width:80px">Lớp</th>
+      <th class="tnum" style="width:90px">Số tháng</th><th class="tnum" style="width:120px">Mức/tháng</th>
+      <th class="tnum" style="width:130px">Thành tiền</th><th style="width:90px">Tình trạng</th>
+    </tr></thead><tbody>${body}</tbody></table></div>`;
+  wrap.querySelectorAll('.hMonths').forEach(el=>{
+    el.addEventListener('input',()=>{const tr=el.closest('tr');ROSTER[+tr.dataset.ri].recs[+tr.dataset.xi].months=parseInt(el.value)||0;recompute();});
+    el.addEventListener('change',renderHist);});
+  wrap.querySelectorAll('.hRate').forEach(el=>{
+    el.addEventListener('input',()=>{const tr=el.closest('tr');ROSTER[+tr.dataset.ri].recs[+tr.dataset.xi].rate=parseM(el);recompute();});
+    el.addEventListener('blur',()=>{setM(el,parseM(el));renderHist();});});
 }
 
 // ---------- sub-nav Operation ----------
@@ -1305,6 +1459,7 @@ document.querySelectorAll('#opSubnav button').forEach(b=>b.addEventListener('cli
   document.getElementById('sub-'+b.dataset.sub).classList.add('on');
   if(b.dataset.sub==='overview') renderOverview();
   if(b.dataset.sub==='nbt') renderNBT();
+  if(b.dataset.sub==='hist') renderHist();
 }));
 
 // ---------- tabs ----------
@@ -1335,7 +1490,8 @@ function snapshot(){
       thuThang:parseInt(tr.querySelector('.thuThang').value)||0,
       chiThang:parseInt(tr.querySelector('.chiThang').value)||0,
       dh:ROSTER[+tr.dataset.idx]?.dh||false,
-      mThisYear:ROSTER[+tr.dataset.idx]?.mThisYear
+      mThisYear:ROSTER[+tr.dataset.idx]?.mThisYear,
+      recs:ROSTER[+tr.dataset.idx]?.recs
     });
   });
   const assum=[];
@@ -1384,6 +1540,7 @@ function applySnapshot(d){
     if(saved.thuThang!==undefined){ tr.querySelector('.thuThang').value=saved.thuThang; ROSTER[+tr.dataset.idx].thuThang=saved.thuThang; }
     if(saved.chiThang!==undefined){ tr.querySelector('.chiThang').value=saved.chiThang; ROSTER[+tr.dataset.idx].chiThang=saved.chiThang; }
     if(saved.dh!==undefined){ ROSTER[+tr.dataset.idx].dh=saved.dh; const d=tr.querySelector('.cbDH'); if(d)d.checked=saved.dh; }
+    if(saved.recs) ROSTER[+tr.dataset.idx].recs=saved.recs;
     if(saved.mThisYear!==undefined && saved.mThisYear!=null){ ROSTER[+tr.dataset.idx].mThisYear=saved.mThisYear; const m=tr.querySelector('.mThisYear'); if(m)m.value=saved.mThisYear; }
   });
   renderCands();
