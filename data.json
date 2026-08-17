@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "savedAt": "2026-08-17T09:39:48.372Z",
+  "savedAt": "2026-08-17T15:05:17.142Z",
   "months": 10,
   "fund": 38499796,
   "annualExpense": 0,
@@ -14,7 +14,9 @@
       "sponName": "Trần Tuấn Dũng",
       "sponMonthly": 1000000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 4,
+      "dh": true,
+      "mThisYear": 10
     },
     {
       "idx": "1",
@@ -25,7 +27,9 @@
       "sponName": "Nhóm INFN VN",
       "sponMonthly": 1000000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 2,
+      "dh": true,
+      "mThisYear": 10
     },
     {
       "idx": "2",
@@ -36,32 +40,51 @@
       "sponName": "HKD Minh An Phát",
       "sponMonthly": 1000000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 4,
+      "dh": true,
+      "mThisYear": 10
     },
     {
-      "idx": "3",
+      "idx": "5",
+      "ma": "Phạm Thị Lan Hương↗ hồ sơ",
+      "support": true,
+      "monthly": 500000,
+      "hasSpon": true,
+      "sponName": "Chị Chi",
+      "sponMonthly": 500000,
+      "thuThang": 0,
+      "chiThang": 1,
+      "dh": false,
+      "mThisYear": 9
+    },
+    {
+      "idx": "8",
       "ma": "Đậu Thị Bảo Ngọc↗ hồ sơ",
       "support": true,
       "monthly": 1500000,
       "hasSpon": true,
-      "sponName": "Chú Việt Anh",
+      "sponName": "Chú Việt Anh (Bắc Giang)",
       "sponMonthly": 1500000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "4",
+      "idx": "9",
       "ma": "Phan Thanh Hà↗ hồ sơ",
       "support": true,
-      "monthly": 500000,
+      "monthly": 1000000,
       "hasSpon": true,
       "sponName": "Chú Ngô Tấn",
-      "sponMonthly": 500000,
+      "sponMonthly": 1000000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "5",
+      "idx": "10",
       "ma": "Thái Tâm Như↗ hồ sơ",
       "support": true,
       "monthly": 500000,
@@ -69,10 +92,12 @@
       "sponName": "Cô Hằng Mon",
       "sponMonthly": 500000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
     },
     {
-      "idx": "6",
+      "idx": "11",
       "ma": "Trần Bá Đức↗ hồ sơ",
       "support": true,
       "monthly": 500000,
@@ -80,21 +105,25 @@
       "sponName": "Cô Quỳnh Anh",
       "sponMonthly": 500000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
     },
     {
-      "idx": "7",
+      "idx": "12",
       "ma": "Phan Anh Thư↗ hồ sơ",
       "support": true,
-      "monthly": 500000,
+      "monthly": 1000000,
       "hasSpon": true,
       "sponName": "Cô Chi",
-      "sponMonthly": 500000,
+      "sponMonthly": 1000000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "8",
+      "idx": "13",
       "ma": "Lê Nhật Hải↗ hồ sơ",
       "support": true,
       "monthly": 500000,
@@ -102,43 +131,51 @@
       "sponName": "Cô Chi",
       "sponMonthly": 500000,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
     },
     {
-      "idx": "9",
+      "idx": "14",
       "ma": "Dương Nhật Bách↗ hồ sơ",
       "support": true,
-      "monthly": 500000,
+      "monthly": 1000000,
       "hasSpon": false,
       "sponName": "",
       "sponMonthly": 0,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "10",
+      "idx": "15",
       "ma": "Nguyễn Văn Trường↗ hồ sơ",
       "support": true,
-      "monthly": 500000,
-      "hasSpon": false,
-      "sponName": "",
-      "sponMonthly": 0,
-      "thuThang": 0,
-      "chiThang": 0
+      "monthly": 1000000,
+      "hasSpon": true,
+      "sponName": "Cô Đỗ Thị Thu Hoà",
+      "sponMonthly": 1000000,
+      "thuThang": 10,
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "11",
+      "idx": "16",
       "ma": "Nguyễn Phương Nhung↗ hồ sơ",
       "support": true,
       "monthly": 500000,
-      "hasSpon": true,
-      "sponName": "Cô Hoà ??",
-      "sponMonthly": 500000,
+      "hasSpon": false,
+      "sponName": "",
+      "sponMonthly": 0,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
     },
     {
-      "idx": "12",
+      "idx": "17",
       "ma": "Nguyễn Hải Phong↗ hồ sơ",
       "support": true,
       "monthly": 500000,
@@ -146,84 +183,100 @@
       "sponName": "",
       "sponMonthly": 0,
       "thuThang": 0,
-      "chiThang": 0
-    },
-    {
-      "idx": "13",
-      "ma": "Nguyễn Đức Kiên↗ hồ sơ",
-      "support": true,
-      "monthly": 500000,
-      "hasSpon": true,
-      "sponName": "Chú Long",
-      "sponMonthly": 500000,
-      "thuThang": 0,
-      "chiThang": 0
-    },
-    {
-      "idx": "14",
-      "ma": "Lê Minh Châu↗ hồ sơ",
-      "support": true,
-      "monthly": 500000,
-      "hasSpon": true,
-      "sponName": "cô Nguyệt (Moon Li)",
-      "sponMonthly": 500000,
-      "thuThang": 0,
-      "chiThang": 0
-    },
-    {
-      "idx": "15",
-      "ma": "Nguyễn Danh Sơn↗ hồ sơ",
-      "support": false,
-      "monthly": 500000,
-      "hasSpon": false,
-      "sponName": "Quỹ CHB",
-      "sponMonthly": 0,
-      "thuThang": 0,
-      "chiThang": 0
-    },
-    {
-      "idx": "16",
-      "ma": "Nguyễn Thị Hải Anh↗ hồ sơ",
-      "support": false,
-      "monthly": 500000,
-      "hasSpon": false,
-      "sponName": "Quỹ CHB",
-      "sponMonthly": 0,
-      "thuThang": 0,
-      "chiThang": 0
-    },
-    {
-      "idx": "17",
-      "ma": "Phạm Thị Lan Hương↗ hồ sơ",
-      "support": false,
-      "monthly": 500000,
-      "hasSpon": false,
-      "sponName": "Chị Chi",
-      "sponMonthly": 0,
-      "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
     },
     {
       "idx": "18",
-      "ma": "Bùi Thị Cẩm Ly↗ hồ sơ",
-      "support": false,
+      "ma": "Nguyễn Đức Kiên↗ hồ sơ",
+      "support": true,
+      "monthly": 1000000,
+      "hasSpon": true,
+      "sponName": "Chú Long Voi",
+      "sponMonthly": 1000000,
+      "thuThang": 0,
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 10
+    },
+    {
+      "idx": "19",
+      "ma": "Lê Minh Châu↗ hồ sơ",
+      "support": true,
+      "monthly": 1000000,
+      "hasSpon": true,
+      "sponName": "cô Nguyệt (Moon Li)",
+      "sponMonthly": 1000000,
+      "thuThang": 0,
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
+    },
+    {
+      "idx": "20",
+      "ma": "Nông Minh Phương↗ hồ sơ",
+      "support": true,
       "monthly": 500000,
+      "hasSpon": true,
+      "sponName": "Chú Ngô Tấn",
+      "sponMonthly": 500000,
+      "thuThang": 0,
+      "chiThang": 0,
+      "dh": false,
+      "mThisYear": 9
+    },
+    {
+      "idx": "3",
+      "ma": "Nguyễn Danh Sơn↗ hồ sơ",
+      "support": false,
+      "monthly": 1000000,
       "hasSpon": false,
       "sponName": "Quỹ CHB",
       "sponMonthly": 0,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 2,
+      "dh": false,
+      "mThisYear": 10
     },
     {
-      "idx": "19",
+      "idx": "4",
+      "ma": "Nguyễn Thị Hải Anh↗ hồ sơ",
+      "support": false,
+      "monthly": 1000000,
+      "hasSpon": false,
+      "sponName": "Quỹ CHB",
+      "sponMonthly": 0,
+      "thuThang": 0,
+      "chiThang": 2,
+      "dh": false,
+      "mThisYear": 10
+    },
+    {
+      "idx": "6",
+      "ma": "Bùi Thị Cẩm Ly↗ hồ sơ",
+      "support": false,
+      "monthly": 1000000,
+      "hasSpon": false,
+      "sponName": "Quỹ CHB",
+      "sponMonthly": 0,
+      "thuThang": 0,
+      "chiThang": 2,
+      "dh": false,
+      "mThisYear": 10
+    },
+    {
+      "idx": "7",
       "ma": "Đỗ Hoàng Hải↗ hồ sơ",
       "support": false,
-      "monthly": 500000,
+      "monthly": 1000000,
       "hasSpon": false,
       "sponName": "Hai em Tròn, Ấm",
       "sponMonthly": 0,
       "thuThang": 0,
-      "chiThang": 0
+      "chiThang": 2,
+      "dh": false,
+      "mThisYear": 10
     }
   ],
   "assum": [
