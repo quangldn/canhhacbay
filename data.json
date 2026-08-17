@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "savedAt": "2026-08-17T15:05:17.142Z",
+  "savedAt": "2026-08-17T15:30:35.024Z",
   "months": 10,
   "fund": 38499796,
   "annualExpense": 0,
@@ -16,7 +16,44 @@
       "thuThang": 0,
       "chiThang": 4,
       "dh": true,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        },
+        {
+          "year": "2026-2027",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2028-2029",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2029-2030",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "1",
@@ -29,7 +66,44 @@
       "thuThang": 0,
       "chiThang": 2,
       "dh": true,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 2,
+          "rate": 1000000,
+          "status": "done"
+        },
+        {
+          "year": "2026-2027",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2028-2029",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2029-2030",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "2",
@@ -42,7 +116,44 @@
       "thuThang": 0,
       "chiThang": 4,
       "dh": true,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        },
+        {
+          "year": "2026-2027",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2028-2029",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2029-2030",
+          "grade": "DH",
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "5",
@@ -55,7 +166,30 @@
       "thuThang": 0,
       "chiThang": 1,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 10,
+          "months": 4,
+          "rate": 500000,
+          "status": "done"
+        },
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "8",
@@ -68,7 +202,16 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1500000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "9",
@@ -81,7 +224,16 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "10",
@@ -94,7 +246,23 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "11",
@@ -107,7 +275,23 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "12",
@@ -120,7 +304,16 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "13",
@@ -133,7 +326,23 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "14",
@@ -146,7 +355,16 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "15",
@@ -159,7 +377,16 @@
       "thuThang": 10,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "16",
@@ -172,7 +399,30 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 10,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "plan"
+        },
+        {
+          "year": "2028-2029",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "17",
@@ -185,7 +435,23 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "18",
@@ -198,7 +464,16 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "current"
+        }
+      ]
     },
     {
       "idx": "19",
@@ -211,7 +486,30 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 10,
+          "months": 9,
+          "rate": 1000000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 11,
+          "months": 9,
+          "rate": 1000000,
+          "status": "plan"
+        },
+        {
+          "year": "2028-2029",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "20",
@@ -224,7 +522,23 @@
       "thuThang": 0,
       "chiThang": 0,
       "dh": false,
-      "mThisYear": 9
+      "mThisYear": 9,
+      "recs": [
+        {
+          "year": "2026-2027",
+          "grade": 11,
+          "months": 9,
+          "rate": 500000,
+          "status": "current"
+        },
+        {
+          "year": "2027-2028",
+          "grade": 12,
+          "months": 10,
+          "rate": 1000000,
+          "status": "plan"
+        }
+      ]
     },
     {
       "idx": "3",
@@ -237,7 +551,16 @@
       "thuThang": 0,
       "chiThang": 2,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        }
+      ]
     },
     {
       "idx": "4",
@@ -250,7 +573,16 @@
       "thuThang": 0,
       "chiThang": 2,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        }
+      ]
     },
     {
       "idx": "6",
@@ -263,7 +595,16 @@
       "thuThang": 0,
       "chiThang": 2,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        }
+      ]
     },
     {
       "idx": "7",
@@ -276,7 +617,16 @@
       "thuThang": 0,
       "chiThang": 2,
       "dh": false,
-      "mThisYear": 10
+      "mThisYear": 10,
+      "recs": [
+        {
+          "year": "2025-2026",
+          "grade": 12,
+          "months": 4,
+          "rate": 1000000,
+          "status": "done"
+        }
+      ]
     }
   ],
   "assum": [
